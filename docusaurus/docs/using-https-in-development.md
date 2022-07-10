@@ -42,13 +42,15 @@ To set a custom certificate, set the `SSL_CRT_FILE` and `SSL_KEY_FILE` environme
 HTTPS=true SSL_CRT_FILE=cert.crt SSL_KEY_FILE=cert.key npm start
 ```
 
-To avoid having to set the environment variable each time, you can either include in the `npm start` script like so:
+To avoid having to set the environment variable each time, you can either include in the `package.json` file like so:
 
 ```json
 {
   "start": "HTTPS=true react-scripts start"
 }
 ```
+
+And start the server by using `npm start`
 
 Or you can create a `.env` file with `HTTPS=true` set.
 [Learn more about environment variables in CRA](https://create-react-app.dev/docs/adding-custom-environment-variables).
